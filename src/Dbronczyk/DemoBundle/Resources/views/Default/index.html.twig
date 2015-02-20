@@ -1,0 +1,104 @@
+{% extends "DbronczykDemoBundle:Default:layout.html.twig" %}
+
+
+{% block title %}Strona Główna{% endblock %}
+
+
+
+
+{% block way %}
+        <!-- Optional header components (ex: slider) -->
+        	<!-- Importing slider content -->
+	<section id="slider-wrapper" class="layer-slider-wrapper layer-slider-fullsize">
+    <div id="layerslider" style="width:100%;"> 
+        <!-- Slide 1 -->
+        <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
+            <!-- slide background -->
+           
+			<img src="{{ asset('bundles/dbronczykdemo/images/full-bg-6.jpg')}}" alt="Slide background" class="ls-bg" style="width: 100%;" />
+            
+            <!-- Left Text -->
+            <h3 class="ls-l title-lg c-white text-uppercase text-center strong" style="width:100%; top: 35%; left:0;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Welcome to Boomerang
+            </h3>
+           <h3 class="ls-l title c-white text-wrapped alpha rounded text-uppercase text-center strong" style="top: 60%; left: 53%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Vision.Believe.Success
+            </h3>
+
+            <h3 class="ls-l title-xs c-white text-uppercase text-center strong" style="width: 100%; top: 82%; left:0;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Start the tour
+            </h3>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
+            <!-- slide background -->
+    {#    <img src="images/backgrounds/full-bg-10.jpg" class="ls-bg" style="width: 100%;" alt="Slide background"/> #}  
+			
+			
+			<img src="{{ asset('bundles/dbronczykdemo/images/full-bg-10.jpg')}}" alt="Slide background" class="ls-bg" style="width: 100%;" />
+			
+			
+            
+            <!-- Left Text -->
+            <h3 class="ls-l title text-normal" style="width:600px; top:35%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                The secret of getting ahead is <span class="strong-600">getting</span> <span class="strong-600 c-base">started</span></strong>
+            </h3>
+
+            <p class="ls-l text-standard" style="width:500px; top:50%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+            Boomerang is ready to be part of your project. Let's get started
+            </p>
+            <a href="https://wrapbootstrap.com/theme/boomerang-multipurpose-template-WB021609D" class="btn btn-base btn-lg ls-l" style="top:60%; left:80px;" data-ls="offsetxin:0;offsetyin:250;durationin:1500;delayin:1500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;" target="_blank">
+                <span>Learn more</span>
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+ <!-- MAIN CONTENT -->
+        
+    <section class="slice no-padding">
+        <div class="wp-section">
+            <div class="row-fluid">
+                <div class="col-md-4 wp-block no-space arrow-right base no-margin">
+                    <div class="wp-block-body">
+                        <div class="img-icon">
+                            <i class="fa fa-flask"></i>
+                        </div>
+                        <h1>Generate ideas</h1>
+                        <p class="text-center">
+                        Lorem ipsum dolor sit amet, consectetur curabitur pellentesque neque eget diam posuere adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 wp-block no-space arrow-right light no-margin">
+                    <div class="wp-block-body">
+                        <div class="img-icon">
+                            <i class="fa fa-flask"></i>
+                        </div>
+                        <h1>Design and concept</h1>
+                        <p class="text-center">
+                        Lorem ipsum dolor sit amet, consectetur urabitur pellentesque neque eget diam posuere adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 wp-block no-space dark no-margin">
+                    <div class="wp-block-body">
+                        <div class="img-icon">
+                            <i class="fa fa-flask"></i>
+                        </div>
+                        <h1>Launch and monitor</h1>
+                        <p class="text-center">
+                        Lorem ipsum dolor sit amet, consectetur urabitur pellentesque neque eget diam posuere adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

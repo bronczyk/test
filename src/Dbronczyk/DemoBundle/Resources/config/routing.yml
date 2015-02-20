@@ -1,0 +1,3 @@
+dbronczyk_demo_homepage:
+    path:     /
+    defaults: { _controller: DbronczykDemoBundle:Default:index }

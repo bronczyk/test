@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="Damian Brończyk">
+    <meta name="robots" content="index, follow">
+	
+		<title>{% block title %} {% endblock %}</title>
+	 
+	<!-- Essential styles -->
+	{% stylesheets 
+		'@DbronczykDemoBundle/Resources/public/assets/bootstrap/css/bootstrap.css'
+		'@DbronczykDemoBundle/Resources/public/assets/fancybox/jquery.fancybox.css'
+		 %}
+     <link type="text/css" rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+	
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+	
+	
+	 <!-- Boomerang styles -->
+	 {% stylesheets 
+	 '@DbronczykDemoBundle/Resources/public/css/global-style.css' filter='cssrewrite' %}
+     <link id="wpStylesheet" type="text/css" rel="stylesheet" href="{{ asset_url }}" media="screen"/>
+	{% endstylesheets %}
+	
+	<!-- Assets -->
+	{% stylesheets 
+		'@DbronczykDemoBundle/Resources/public/assets/owl-carousel/owl.carousel.css'
+		'@DbronczykDemoBundle/Resources/public/assets/owl-carousel/owl.theme.css' 
+		'@DbronczykDemoBundle/Resources/public/assets/sky-forms/css/sky-forms.css'
+		filter='cssrewrite' %}
+     <link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+
+		
+	 <!--[if lt IE 9]>
+	{% stylesheets '@DbronczykDemoBundle/Resources/public/assets/sky-forms/css/sky-forms-ie8.css' filter='cssrewrite' %}
+     <link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+    <![endif]-->
+	
+	<!-- Required JS -->	
+	{% javascripts 
+		'@DbronczykDemoBundle/Resources/public/js/jquery.js' 
+		'@DbronczykDemoBundle/Resources/public/js/jquery-ui.min.js' 
+		filter='cssrewrite' %}
+	 <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+	
+</head>
+
+<body>
+		 
+
+
+
+ <!-- HEADER -->
+        <div id="divHeaderWrapper">
+            <header class="header-standard-2">     
+    <!-- MAIN NAV -->
+    <div class="navbar navbar-wp navbar-arrow mega-nav" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-toggle-aside-menu">
+                    <i class="fa fa-outdent icon-custom"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars icon-custom"></i>
+                </button>
+
+                <a class="navbar-brand" href="{{ path('dbronczyk_demo_homepage') }}" title="MegaFilm | Wszystkie filmy w jednym miejscu">
+                    
+					{% image '@DbronczykDemoBundle/Resources/public/images/logo.png' %}
+						<img src="{{ asset_url }}" alt="MegaFilm | Wszystkie filmy w jednym miejscu" />
+					{% endimage %}
+				
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden-md hidden-lg">
+                        <div class="bg-light-gray">
+                            <form class="form-horizontal form-light p-15" role="form">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control" placeholder="I want to find ...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-white" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    
+					
+					<li class=""><a tabindex="-1" href="#">FILMY</a></li> 					
+					<li class=""><a tabindex="-1" href="#">KONTAKT</a></li>
+					<li class=""><a tabindex="-1" href="#">KOSZYK
+					
+					</a></li> 	
+					<li class=""><a tabindex="-1" href="#">BIBLIOTEKA</a></li> 	
+									
+                    
+                    
+                    <li class="dropdown dropdown-aux animate-click" data-animate-in="animated bounceInUp" data-animate-out="animated fadeOutDown" style="z-index:500;">
+                        <a href="#" class="dropdown-form-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-user animate-wr">
+                            <li id="dropdownForm">
+                                <div class="dropdown-form">
+                                    <form class="form-horizontal form-light p-15" role="form">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="I want to find ...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-base" type="button">Go</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                  
+                </ul>
+               
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</header>        
+</div>
+	
+	{% block way %} {% endblock %}
+	
+	{% block description %} {% endblock %}
+	
+	
+	<div class="container">
+        {% block content %}
+			
+				
+			
+		{% endblock %}
+    </div>
+
+	
+	
+	{% block shipping %} {% endblock %}
+	
+	
+	
+	
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="col">
+                       <h4>Contact us</h4>
+                       <ul>
+                            <li>5th Avenue, New York - United States</li>
+                            <li>Phone: +10 724 1234 567 | Fax: +10 724 1234 567 </li>
+                            <li>Email: <a href="mailto:hello@example.com" title="Email Us">hello@example.com</a></li>
+                            <li>Skype: <a href="skype:my.business?call" title="Skype us">my-business</a></li>
+                            <li>Wypożyczalnia filmów</li>
+                        </ul>
+                     </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="col">
+                        <h4>Mailing list</h4>
+                        <p>Sign up if you would like to receive occasional treats from us.</p>
+                        <form class="form-horizontal form-light">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Your email address...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-base" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="col col-social-icons">
+                        <h4>Follow us</h4>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-skype"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-flickr"></i></a>
+                    </div>
+                </div>
+
+                 <div class="col-md-3">
+                    <div class="col">
+                        <h4>About us</h4>
+                        <p class="no-margin">
+                        Najnowsze i najlepsze filmy na wyciągnięcie ręki! Zawsze w niskiej cenie! 
+                        <br><br>
+                        <a href="#" class="btn btn-block btn-base btn-icon fa-check"><span>Try it now</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+                <div class="col-lg-9 copyright">
+                    2014 © Damian Brończyk. All rights reserved.
+                    <a href="#">Terms and conditions</a>
+                </div>
+                <div class="col-lg-3">
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	
+
+	<!-- Essentials -->
+	{% javascripts 
+	'@DbronczykDemoBundle/Resources/public/js/modernizr.custom.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/bootstrap/js/bootstrap.min.js' 
+	'@DbronczykDemoBundle/Resources/public/js/jquery.mousewheel-3.0.6.pack.js' 
+	'@DbronczykDemoBundle/Resources/public/js/jquery.easing.js' 
+	'@DbronczykDemoBundle/Resources/public/js/jquery.metadata.js' 
+	'@DbronczykDemoBundle/Resources/public/js/jquery.hoverup.js' 
+	'@DbronczykDemoBundle/Resources/public/js/jquery.hoverdir.js'
+	'@DbronczykDemoBundle/Resources/public/js/jquery.stellar.js' 
+	filter='cssrewrite' %}
+	 <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}	
+	
+	
+	<!-- Forms -->
+	{% javascripts 
+	'@DbronczykDemoBundle/Resources/public/assets/ui-kit/js/jquery.powerful-placeholder.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/ui-kit/js/cusel.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/sky-forms/js/jquery.form.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/sky-forms/js/jquery.validate.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/sky-forms/js/jquery.maskedinput.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/sky-forms/js/jquery.modal.js' 
+	filter='cssrewrite' %}
+	 <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+	
+	<!-- Assets -->	
+	{% javascripts 
+	'@DbronczykDemoBundle/Resources/public/assets/hover-dropdown/bootstrap-hover-dropdown.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/page-scroller/jquery.ui.totop.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/mixitup/jquery.mixitup.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/mixitup/jquery.mixitup.init.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/fancybox/jquery.fancybox.pack.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/waypoints/waypoints.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/milestone-counter/jquery.countTo.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/easy-pie-chart/js/jquery.easypiechart.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/social-buttons/js/rrssb.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/nouislider/js/jquery.nouislider.min.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/owl-carousel/owl.carousel.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/bootstrap/js/tooltip.js' 
+	'@DbronczykDemoBundle/Resources/public/assets/bootstrap/js/popover.js' 
+	'@DbronczykDemoBundle/Resources/public/js/wp.app.js' 
+	filter='cssrewrite' %}
+	 <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+	
+	
+<!--[if lt IE 9]>
+	{% javascripts 
+	'@DbronczykDemoBundle/Resources/public/js/html5shiv.js'
+	'@DbronczykDemoBundle/Resources/public/js/respond.min.js' 
+	filter='cssrewrite' %}
+	 <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+<![endif]-->
+
+<!-- Temp -- You can remove this once you started to work on your project -->
+	{% javascripts 
+	'@DbronczykDemoBundle/Resources/public/js/jquery.cookie.js'
+	'@DbronczykDemoBundle/Resources/public/js/wp.switcher.js' 
+	'@DbronczykDemoBundle/Resources/public/js/wp.ga.js' 
+	filter='cssrewrite' %}
+	 <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+	
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,4 @@
+dbronczyk_demo:
+    resource: "@DbronczykDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
